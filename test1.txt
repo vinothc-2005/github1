@@ -1,1 +1,40 @@
-create test1.txt file 
+1.import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    System.out.print("Enter the number : ");
+	    int num = obj.nextInt();
+	    for(int i=0;i<num;i++)
+		System.out.println("Vinoth");
+	}
+}
+
+2.public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    System.out.print("Enter the number : ");
+	    int num = obj.nextInt();
+	    int i =0;
+	    while(i<num){
+		System.out.println("Vinoth");
+		i++;
+	    }
+	}
+}
+
+3.import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    System.out.print("Enter the number : ");
+	    int num = obj.nextInt();
+	    int i =0;
+	    do{
+		System.out.println("Vinoth");
+		i++;
+	    }while(i<num);
+	}
+}
