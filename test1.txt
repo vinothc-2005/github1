@@ -38,3 +38,29 @@ public class Main
 	    }while(i<num);
 	}
 }
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner obj = new Scanner(System.in);
+		System.out.println("Enter size of Element");
+		int size = obj.nextInt();
+		int sum =0;
+		int arr[] = new int[size];
+		for(int index=0;index<size;index++)
+		  arr[index] = obj.nextInt();
+		for(int index=0;index<size;index++)
+		{
+		    sum = sum + arr[index];
+		}
+		System.out.println(sum);
+	    int temp = sum;
+		for(int index=0;index<size;index++)
+		{
+		    System.out.print(temp-arr[index]+" ");
+		}
+		
+		
+
+	}
+}
