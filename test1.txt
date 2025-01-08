@@ -64,3 +64,111 @@ public class Main
 
 	}
 }
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner summa= new Scanner(System.in);
+        int size = summa.nextInt();
+        int[] arr = new int[size];
+        for(int i=0;i<size;i++)
+            arr[i] = summa.nextInt();
+        for(int i=0;i<size/2;i++){
+            int temp;
+        temp = arr[i];
+        arr[i]=arr[size-1-i];
+        arr[size-1-i]=temp;
+
+        }
+        System.out.print(Arrays.toString(arr));
+    }
+
+}
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void replaceWithSumOfLeftElements(int size, long[] arr) {
+        // Initialize the cumulative sum
+        long cumulativeSum = 0;
+
+        // Iterate through the array and replace elements
+        for (int i = 0; i < size; i++) {
+            long current = arr[i];
+            arr[i] = cumulativeSum;
+            cumulativeSum += current;
+        }
+    }
+
+    public static void main(String[] args) {
+        // Create a Scanner object for input
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the size of the array
+        System.out.print("Enter the size of the array: ");
+        int size = scanner.nextInt();
+
+        // Create the array and read elements
+        long[] arr = new long[size];
+        System.out.println("Enter " + size + " elements:");
+        for (int i = 0; i < size; i++) {
+            arr[i] = scanner.nextLong();
+        }
+
+        // Function call
+        replaceWithSumOfLeftElements(size, arr);
+
+        // Output the result
+        System.out.println("Modified array:");
+        for (long num : arr) {
+            System.out.print(num + " ");
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // Create a Scanner object for input
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the size of the array
+        System.out.print("Enter the size of the array: ");
+        int size = scanner.nextInt();
+
+        // Create the array and read elements
+        long[] arr = new long[size];
+        System.out.println("Enter " + size + " elements:");
+        for (int i = 0; i < size; i++) {
+            arr[i] = scanner.nextLong();
+        }
+
+        // Read the position of the element to delete
+        System.out.print("Enter the position of the element to delete: ");
+        int position = scanner.nextInt();
+
+        // Check if the position is valid
+        if (position < 1 || position > size) {
+            System.out.println("Deletion not possible");
+        } else {
+            // Delete the element and print the updated array
+            System.out.println("Updated array:");
+            for (int i = 0; i < size; i++) {
+                if (i != position - 1) { // Skip the element at the given position
+                    System.out.print(arr[i] + " ");
+                }
+            }
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
+}
